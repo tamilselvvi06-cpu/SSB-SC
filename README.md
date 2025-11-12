@@ -1,12 +1,11 @@
-# SSB
 
-EXP NO: 3	SSB-SC-AM MODULATION using SCILAB
+## EXP NO: 3	SSB-SC-AM MODULATION using SCILAB
 
-AIM:
+# AIM:
 
 To write a program to perform SSBSC modulation and demodulation using SCI LAB and study its spectral characteristics
 
-EQUIPMENTS REQUIRED
+# EQUIPMENTS REQUIRED
 
 •	Computer with i3 Processor
 
@@ -15,7 +14,7 @@ EQUIPMENTS REQUIRED
 Note: Keep all the switch faults in off position
 
 
-Algorithm
+# Algorithm
 1.	Define Parameters:
 •	Fs: Sampling frequency.
 •	T: Duration of the signal.
@@ -35,7 +34,7 @@ Algorithm
 •	Plot the message signal, carrier signal, SSBSC modulated signal, and the recovered signal after demodulation.
 
 
-PROCEDURE
+# PROCEDURE
 
 •	Refer Algorithms and write code for the experiment.
 •	Open SCILAB in System
@@ -46,26 +45,58 @@ PROCEDURE
 •	If any Error, correct it in code and execute again
 •	Verify the generated waveform using Tabulation and Model Waveform
 
-Model Waveform
+# Model Waveform
 
 <img width="704" height="178" alt="image" src="https://github.com/user-attachments/assets/32ee29b3-0d95-4192-9762-972d50c05c90" />
 <img width="706" height="167" alt="image" src="https://github.com/user-attachments/assets/bff0d8fd-d679-444e-af37-0b34585853c1" />
 
-Program
+###  Program
+```
+ac=21.6; 
+Am=9.8; 
+fc=2680;
+fm=430;
+fs=25000; 
+t=0:1/fs:2/fm; 
+wc=2*3.14*fc;
+wm=2*3.14*fm;
+e1=(Am*sin(wm*t));
+subplot(4,1,1);
+plot(t,e1); 
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("Message Signal m(t)");
+e2=(ac*sin(wc*t)); 
+subplot(4,1,2); 
+plot(t,e2);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("Carrier Signal c(t)");
+sbsc1=(Am/2.*cos(wc*t-wm*t))-(Am/2.*cos(wc*t+wm*t));
+sbsc2=(Am/2.*cos(wc*t-wm*t))+(Am/2.*cos(wc*t+wm*t)); 
+e3=(sbsc2)+(sbsc1); 
+subplot(4,1,3);
+plot(t,e3);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("SSB-SC Modulated Signal (LSB)");
+e4=(sbsc2)-(sbsc1); 
+subplot(4,1,4); 
+plot(t,e4);
+xlabel("Time(s)");
+ylabel("Amplitude");
+title("SSB-SC Modulated Signal (USB)");
+xgrid;
+```
+# OUTPUT WAVEFORM
 
-OUTPUT WAVEFORM
+![WhatsApp Image 2025-11-12 at 18 23 57_c7dde3d7](https://github.com/user-attachments/assets/7b341b7c-178e-4003-8b4b-4201c9796a74)
 
-TABULATION
+# TABULATION
 
+![WhatsApp Image 2025-11-12 at 19 05 56_387cc21b](https://github.com/user-attachments/assets/7e0a4e74-3076-46d6-8539-818b8587002d)
 
-
-
-
-
-
-
-
-RESULT:
+# RESULT:
 
 Thus, the SSB-SC-AM Modulation and Demodulation is experimentally done and the output is verified.
 
