@@ -90,6 +90,7 @@ xgrid;
 ```
 # OUTPUT WAVEFORM
 
+
 ![WhatsApp Image 2025-11-12 at 18 23 57_c7dde3d7](https://github.com/user-attachments/assets/7b341b7c-178e-4003-8b4b-4201c9796a74)
 
 # TABULATION
