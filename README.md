@@ -51,6 +51,7 @@ Note: Keep all the switch faults in off position
 <img width="706" height="167" alt="image" src="https://github.com/user-attachments/assets/bff0d8fd-d679-444e-af37-0b34585853c1" />
 
 ###  Program
+
 ```
 ac=21.6; 
 Am=9.8; 
